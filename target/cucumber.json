@@ -1,0 +1,433 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-20T17:17:02.988Z",
+        "line": 3,
+        "name": "Create student as a teacher and verify status code is 201",
+        "description": "",
+        "id": "create-student;create-student-as-a-teacher-and-verify-status-code-is-201",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "I logged Bookit api using \"blyst6@si.edu\" and \"barbabaslyst\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "I send POST request \"/api/students/student\" endpoint with following information",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "first-name",
+                  "harold"
+                ]
+              },
+              {
+                "cells": [
+                  "last-name",
+                  "finch"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "harold534345@cydeo.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "abc123"
+                ]
+              },
+              {
+                "cells": [
+                  "role",
+                  "student-team-member"
+                ]
+              },
+              {
+                "cells": [
+                  "campus-location",
+                  "VA"
+                ]
+              },
+              {
+                "cells": [
+                  "batch-number",
+                  "8"
+                ]
+              },
+              {
+                "cells": [
+                  "team-name",
+                  "Nukes"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "status code should be 201",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "I delete previously added student",
+            "match": {},
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-20T17:17:03.063Z",
+        "line": 18,
+        "name": "Test new properties",
+        "description": "",
+        "id": "create-student;test-new-properties",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "I get environment information",
+            "match": {},
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Create Student",
+    "description": "",
+    "id": "create-student",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/student.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-20T17:17:03.073Z",
+        "line": 5,
+        "name": "verify information about logged user",
+        "description": "",
+        "id": "user-verification;verify-information-about-logged-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I logged Bookit api using \"fscoughx@msu.edu\" and \"feodorascough\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "I get the current user information from api",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "status code should be 200",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-20T17:17:03.086Z",
+        "line": 11,
+        "name": "verify information about logged user from api and database",
+        "description": "",
+        "id": "user-verification;verify-information-about-logged-user-from-api-and-database",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "I logged Bookit api using \"fscoughx@msu.edu\" and \"feodorascough\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "I get the current user information from api",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "the information about current user from api and database should match",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-20T17:17:03.098Z",
+        "line": 17,
+        "name": "three point/layer (UI,API,DATABASE)",
+        "description": "",
+        "id": "user-verification;three-point/layer-(ui-api-database)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "user logs in using \"fscoughx@msu.edu\" \"feodorascough\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "user is on the my self page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 20,
+            "name": "I logged Bookit api using \"fscoughx@msu.edu\" and \"feodorascough\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "I get the current user information from api",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 22,
+            "name": "UI,API and Database user information must be match",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@db"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-20T17:17:03.118Z",
+        "line": 34,
+        "name": "three point/layer (UI,API,DATABASE)",
+        "description": "",
+        "id": "user-verification;three-point/layer-(ui-api-database);;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 26,
+            "name": "user logs in using \"fscoughx@msu.edu\" \"feodorascough\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "user is on the my self page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "I logged Bookit api using \"fscoughx@msu.edu\" and \"feodorascough\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 29,
+            "name": "I get the current user information from api",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "UI,API and Database user information must be match",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@db"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-20T17:17:03.139Z",
+        "line": 35,
+        "name": "three point/layer (UI,API,DATABASE)",
+        "description": "",
+        "id": "user-verification;three-point/layer-(ui-api-database);;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 26,
+            "name": "user logs in using \"lfinnisz@yolasite.com\" \"lissiefinnis\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "user is on the my self page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "I logged Bookit api using \"lfinnisz@yolasite.com\" and \"lissiefinnis\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 29,
+            "name": "I get the current user information from api",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "UI,API and Database user information must be match",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@db"
+          }
+        ]
+      }
+    ],
+    "name": "User Verification",
+    "description": "",
+    "id": "user-verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/user.feature",
+    "tags": [
+      {
+        "name": "@smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
